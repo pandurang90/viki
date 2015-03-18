@@ -2,8 +2,8 @@ require './video.rb'
 require './channel'
 require './celebrity'
 
-class Viki
-  #This method returns true if there are duplicates in contents otherwise false
+class DuplicateFinder
+  
   def check_for_duplicate_content(contents)
     if has_duplicate? contents.map(&:id)
       puts "There are duplicates in #{contents.first.class.to_s} content"
@@ -12,6 +12,7 @@ class Viki
     end
   end
 
+  #This method returns true if there are duplicates in contents otherwise false
   def has_duplicate?(content_ids)
   	has_duplicate = false
     content_ids.each do |content_id|
@@ -29,7 +30,8 @@ end
 videos = []
 channels = []
 celebrity = []
-v = Viki.new
+v = DuplicateFinder.new
+
 [1,2,3,4,5].each do |number|
 	videos.push Video.new(number,"#{number}_title")
 	channels.push Channel.new(number,"#{number}_name")
