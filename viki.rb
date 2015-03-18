@@ -3,17 +3,17 @@ require './channel'
 require './celebrity'
 
 class Viki
-	#This method returns true if there are duplicates in contents otherwise false
-	def self.check_for_duplicate_content(content_ids)
-		has_duplicate = false
-		content_ids.each do |content_id|
-			if content_ids.count(content_id) > 1
-				has_duplicate = true
-				break
-			end
-		end
-		has_duplicate
-	end
+  #This method returns true if there are duplicates in contents otherwise false
+  def self.check_for_duplicate_content(content_ids)
+    has_duplicate = false
+    content_ids.each do |content_id|
+      if content_ids.count(content_id) > 1
+        has_duplicate = true
+        break
+      end
+    end
+    has_duplicate
+  end
 end
 
 

@@ -1,9 +1,9 @@
 class Celebrity
-	attr_accessor :id, :name
+  attr_accessor :id, :name
 
-	def initialize(id,title)
-		@id = id
-		@name = name
-	end
+  def initialize(id,title)
+    @id = id
+    @name = name
+  end
 	
 end
