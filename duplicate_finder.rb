@@ -13,6 +13,7 @@ class DuplicateFinder
   end
 
   #This method returns true if there are duplicates in contents otherwise false
+  #using primary key id here, since primary key is unique one
   def has_duplicate?(content_ids)
   	has_duplicate = false
     content_ids.each do |content_id|
@@ -64,7 +65,7 @@ celebrity = []
 	celebrity.push Celebrity.new(number,"#{number}_name")
 end
 
-puts "This is an example with no duplicate content"
+puts "This is an example with duplicate content"
 puts ""
 v.check_for_duplicate_content videos
 v.check_for_duplicate_content channels
